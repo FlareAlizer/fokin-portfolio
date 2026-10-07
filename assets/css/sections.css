@@ -1,0 +1,121 @@
+/* Panel & slides: one section on screen at a time, the phenomenon stays visible */
+.panel {
+  position: fixed; z-index: 10; left: var(--gutter); top: 104px; bottom: 84px;
+  width: min(440px, 36vw); overflow-y: auto; overscroll-behavior: contain;
+  padding: 12px 10px 24px 0; scrollbar-width: thin; scrollbar-color: var(--line-2) transparent;
+  -webkit-mask-image: linear-gradient(transparent 0, #000 18px, #000 calc(100% - 28px), transparent 100%);
+          mask-image: linear-gradient(transparent 0, #000 18px, #000 calc(100% - 28px), transparent 100%);
+  transition: opacity .8s var(--ease);
+}
+[data-slide="top"] .panel { width: min(600px, 46vw); }
+[data-slide="contact"] .panel { left: 50%; width: min(520px, 88vw); transform: translateX(-50%); text-align: center; }
+.text-off .panel { opacity: 0; pointer-events: none; }
+.panel__handle { display: none; }
+
+.slide { display: flex; flex-direction: column; justify-content: center; min-height: 100%; scroll-margin-top: 40px; }
+.js .slide { display: none; }
+.js .slide.is-active { display: flex; }
+.panel .slide { transition: opacity .3s var(--ease), transform .3s var(--ease); }
+.panel.is-leaving .slide { opacity: 0; transform: translateY(8px); }
+.slide.is-in > * { animation: rise .8s var(--ease) both; }
+.slide.is-in > :nth-child(2) { animation-delay: .06s; }
+.slide.is-in > :nth-child(3) { animation-delay: .12s; }
+.slide.is-in > :nth-child(4) { animation-delay: .18s; }
+.slide.is-in > :nth-child(5) { animation-delay: .24s; }
+.slide.is-in > :nth-child(n + 6) { animation-delay: .3s; }
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+/* ---------- typography ---------- */
+.slide p { margin-bottom: 14px; }
+.h2 { font-family: var(--f-head); font-weight: 600; color: var(--text-hi); font-size: clamp(1.9rem, 2.8vw, 2.7rem); line-height: 1.1; letter-spacing: -.03em; margin-bottom: 18px; }
+.slide .lead { font-size: 18px; line-height: 1.55; color: var(--text-hi); }
+.slide .muted { color: var(--muted); }
+.slide .meta { font-size: 13.5px; color: var(--accent); margin-bottom: 8px; }
+.slide .big { font-family: var(--f-head); font-weight: 600; color: var(--accent); font-size: clamp(2.6rem, 4.6vw, 4rem); line-height: 1; letter-spacing: -.04em; margin: 4px 0 8px; }
+
+/* home */
+.eyebrow { font-size: 15px; color: var(--muted); }
+.home__title { font-family: var(--f-head); font-weight: 600; color: var(--text-hi); font-size: clamp(3rem, 6.4vw, 6.6rem); line-height: .98; letter-spacing: -.04em; margin: 14px 0 22px; }
+.slide .home__lead { max-width: 44ch; font-size: clamp(17px, 1.35vw, 19px); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 8px 0 18px; }
+.slide .home__note { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; color: var(--muted); margin: 0; }
+.dot { width: 7px; height: 7px; border-radius: 50%; background: #6fbf8e; box-shadow: 0 0 0 4px rgba(111, 191, 142, .14); }
+
+/* about */
+.nums { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-bottom: 22px; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--line); }
+.nums div { display: grid; gap: 4px; align-content: start; padding: 14px 16px; background: rgba(6, 6, 9, .55); }
+.nums b { font-family: var(--f-head); font-weight: 600; font-size: 1.3rem; line-height: 1.15; letter-spacing: -.02em; color: var(--text-hi); white-space: nowrap; }
+.nums span { font-size: 13.5px; line-height: 1.45; color: var(--muted); }
+.me { display: flex; gap: 16px; align-items: center; margin-top: 8px; }
+.me img { width: 92px; border-radius: 12px; border: 1px solid var(--line-2); filter: grayscale(.45) contrast(.92) brightness(.92); }
+.me figcaption { display: grid; gap: 4px; font-size: 14px; }
+.me i { display: inline-block; min-width: 64px; font-style: normal; color: var(--muted); }
+
+/* projects */
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 18px; }
+.tabs button { height: 36px; padding: 0 14px; border-radius: 10px; border: 1px solid var(--line-2); color: var(--muted); font-size: 14.5px; transition: color .3s, border-color .3s, background-color .3s; }
+.tabs button:hover { color: var(--text-hi); }
+.tabs button[aria-selected="true"] { color: var(--text-hi); border-color: var(--accent); background: var(--accent-soft); }
+.project h3 { font-size: 15px; font-weight: 600; color: var(--text-hi); margin: 6px 0 10px; }
+.list { display: grid; gap: 8px; margin-bottom: 16px; }
+.list li { position: relative; padding-left: 16px; font-size: 15px; }
+.list li::before { content: '–'; position: absolute; left: 0; color: var(--faint); }
+.slide .stackline { padding-top: 12px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+.links a { color: var(--text-hi); border-bottom: 1px solid rgba(198, 161, 124, .55); transition: color .3s, border-color .3s; }
+.links a:hover { color: var(--accent); border-color: var(--accent); }
+
+/* experience & awards */
+.rows li { display: grid; gap: 2px; padding: 12px 0; border-top: 1px solid var(--line); }
+.rows li:first-child { border-top: 0; padding-top: 0; }
+.rows__date { font-size: 13.5px; color: var(--muted); }
+.rows--awards .rows__date { font-family: var(--f-head); font-weight: 600; color: var(--accent); }
+.rows b { font-family: var(--f-head); font-weight: 600; font-size: 15.5px; color: var(--text-hi); letter-spacing: -.01em; }
+.rows li > span:last-child { font-size: 15px; }
+
+/* stack */
+.skills dt { font-size: 15px; font-weight: 600; color: var(--text-hi); margin-top: 14px; }
+.skills dt:first-child { margin-top: 0; }
+.skills dd { font-size: 15px; color: var(--muted); }
+
+/* contact */
+.contacts { width: 100%; text-align: left; margin: 10px 0 26px; }
+.contacts li { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 13px 0; border-bottom: 1px solid var(--line-2); }
+.contacts span { font-size: 14px; color: var(--faint); }
+.contacts a { color: var(--text-hi); font-size: 16.5px; overflow-wrap: anywhere; text-align: right; transition: color .3s; }
+.contacts a:hover { color: var(--accent); }
+.slide .fine { font-size: 12.5px; color: var(--faint); margin: 0; }
+.slide--contact .h2 { font-size: clamp(2.4rem, 4.4vw, 3.6rem); }
+
+/* ---------- no JavaScript: plain long page ---------- */
+.no-js .panel { position: static; width: auto; max-width: 720px; margin: 0 auto; padding: 110px var(--gutter) 60px; overflow: visible; -webkit-mask-image: none; mask-image: none; }
+.no-js .slide { min-height: 0; margin-bottom: 90px; }
+.no-js .project[hidden] { display: block; margin-top: 24px; }
+
+/* ---------- phones: the phenomenon on top, text in a bottom sheet ---------- */
+@media (max-width: 760px) {
+  .panel, [data-slide="top"] .panel, [data-slide="contact"] .panel {
+    left: 0; right: 0; top: auto; bottom: 0; width: auto; height: 46vh; transform: none; text-align: left;
+    padding: 0 20px calc(22px + env(safe-area-inset-bottom));
+    border-radius: 22px 22px 0 0; border-top: 1px solid var(--line-2);
+    background: rgba(8, 8, 12, .84); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px);
+    -webkit-mask-image: none; mask-image: none;
+    transition: height .5s var(--ease), transform .5s var(--ease);
+  }
+  .sheet-full .panel { height: 86vh; }
+  .text-off .panel { opacity: 1; pointer-events: auto; transform: translateY(calc(100% - 30px)); }
+  .panel__handle {
+    display: block; position: sticky; top: 0; z-index: 2; width: calc(100% + 40px); height: 30px; margin: 0 -20px 6px;
+    background: linear-gradient(rgba(8, 8, 12, .96) 70%, rgba(8, 8, 12, 0));
+  }
+  .panel__handle::before { content: ''; position: absolute; left: 50%; top: 11px; width: 42px; height: 4px; margin-left: -21px; border-radius: 2px; background: var(--line-2); }
+  .slide { justify-content: flex-start; min-height: 0; }
+  .home__title { font-size: clamp(2.3rem, 11vw, 3.2rem); margin: 8px 0 14px; }
+  .actions .btn { flex: 1 1 auto; }
+  .contacts a { font-size: 15.5px; }
+  .no-js .panel { position: static; height: auto; border-radius: 0; background: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .slide.is-in > * { animation: none; }
+}
+.lite-off { margin-top: 14px; font-size: 13px; color: var(--muted); border-bottom: 1px dashed var(--line-2); transition: color .3s; }
+.lite-off:hover { color: var(--accent); }

@@ -1,0 +1,9 @@
+# резюме лежит рядом с сайтом, но в репозиторий не идёт
+cv/
+
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+node_modules/
+*.log

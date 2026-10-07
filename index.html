@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ru" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Владислав Фокин — бэкенд-разработчик</title>
+  <meta name="description" content="Владислав Фокин, бэкенд-разработчик из Москвы. Python, FastAPI, PostgreSQL, Celery, LLM. CTO в Onvy. Проекты, опыт, награды и контакты.">
+  <meta name="theme-color" content="#050507">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Владислав Фокин — бэкенд-разработчик">
+  <meta property="og:description" content="Пишу бэкенд на Python. CTO в Onvy. Сэкономил Strauss Group около 30 млн ₽ в год на логистике.">
+  <meta property="og:locale" content="ru_RU">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css?v=5">
+  <link rel="stylesheet" href="assets/css/sections.css?v=5">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+</head>
+<body>
+  <canvas id="space" aria-hidden="true"></canvas>
+  <div class="fallback-sky" aria-hidden="true"></div>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="curtain" aria-hidden="true"></div>
+  <div class="hud" aria-hidden="true"><div class="hud__box"><i></i><i></i><i></i><i></i></div><p class="hud__read"></p></div>
+  <div class="cursor-hint" aria-hidden="true">Потяните, зажмите или кликните</div>
+  <p class="touch-hint" aria-hidden="true">Космос можно крутить пальцем. Задержите палец, чтобы подлететь ближе.</p>
+  <div class="slowbox" role="dialog" aria-live="polite" hidden>
+    <p>Кажется, на этом устройстве я немного торможу. Включить лёгкую версию?</p>
+    <div><button type="button" data-lite="1">Да</button><button type="button" data-lite="0">Нет</button></div>
+  </div>
+
+  <header class="top">
+    <div class="top__brand">
+      <a class="top__logo" href="#top" data-go>Влад Фокин</a>
+      <nav class="top__menu" aria-label="Разделы">
+        <a href="#about" data-go>Обо мне</a><i>/</i><a href="#projects" data-go>Проекты</a><i>/</i><a href="#case" data-go>Кейс</a><i>/</i><a href="#experience" data-go>Опыт</a><i>/</i><a href="#awards" data-go>Награды</a><i>/</i><a href="#stack" data-go>Чем владею</a><i>/</i><a href="#contact" data-go>Контакты</a>
+      </nav>
+    </div>
+    <div class="top__right">
+      <a class="top__status" href="#contact" data-go>Открыт к работе: да</a>
+      <button class="eye" type="button" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+        <span class="eye__label">Скрыть текст</span>
+      </button>
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main class="panel" id="panel">
+    <button class="panel__handle" type="button" aria-label="Развернуть текст" aria-expanded="false"></button>
+
+    <section class="slide slide--home" id="top" data-title="Главная">
+      <p class="eyebrow">Бэкенд-разработчик, Москва</p>
+      <h1 class="home__title">Владислав<br>Фокин</h1>
+      <p class="home__lead">Пишу бэкенд на Python: FastAPI, PostgreSQL, Celery, интеграции с LLM. Сейчас делаю Onvy. Это сервис, который слушает смены официантов и разбирает их разговоры по стандарту ресторана.</p>
+      <div class="actions">
+        <a class="btn btn--solid" href="#projects" data-go>Посмотреть проекты</a>
+        <a class="btn" href="https://t.me/FlareAliZZZZe" target="_blank" rel="noopener">Написать в Telegram</a>
+      </div>
+      <p class="home__note"><span class="dot"></span>Открыт к предложениям о работе</p>
+    </section>
+
+    <section class="slide" id="about" data-title="Обо мне">
+      <h2 class="h2">Обо мне</h2>
+      <div class="nums">
+        <div><b>≈30 млн ₽</b><span>в год сэкономил Strauss Group на доставке до дистрибьюторов</span></div>
+        <div><b>Teboil</b><span>создал сайт для благотворительного марафона</span></div>
+        <div><b>800+</b><span>автотестов в Onvy, включая проверку миграций на живой базе</span></div>
+        <div><b>4</b><span>призовых места на всероссийских чемпионатах</span></div>
+      </div>
+      <p class="lead">Мне нравится бэкенд: базы, очереди, интеграции, всё, что должно работать и не падать. Фронтенд делать не люблю, но иногда приходится.</p>
+      <p>Начинал с C++ в Московской школе программистов, учился там два года. Первой серьёзной программой была утилита, которая пряталась от диспетчера задач Windows. Пользы от неё было немного, зато я разобрался, как устроены процессы ОС.</p>
+      <p>Потом было два лета в Strauss Group. В первый раз я сделал приложение для учёта оборудования на Power Apps. Во второй посчитал логистику и написал алгоритм, после которого доставка стала обходиться компании примерно на 30 млн ₽ в год дешевле.</p>
+      <p>Сейчас я CTO в Onvy и единственный разработчик в команде. Параллельно беру заказы, езжу на кейс-чемпионаты и иногда преподаю.</p>
+      <figure class="me">
+        <img src="assets/img/vlad.png" width="219" height="257" alt="Владислав Фокин" loading="lazy">
+        <figcaption>
+          <span><i>Сейчас</i>CTO в Onvy</span>
+          <span><i>Языки</i>Python, TypeScript, SQL, C++</span>
+          <span><i>Учёба</i>НИЯУ МИФИ, бизнес-информатика</span>
+          <span><i>Город</i>Москва</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="slide" id="projects" data-title="Проекты">
+      <h2 class="h2">Проекты</h2>
+      <p class="muted">Три последние работы. Код Onvy и Teboil закрыт, но могу показать и рассказать подробнее на созвоне.</p>
+      <div class="tabs" role="tablist" aria-label="Проекты">
+        <button role="tab" id="tab-onvy" aria-controls="pr-onvy" aria-selected="true">Onvy</button>
+        <button role="tab" id="tab-teboil" aria-controls="pr-teboil" aria-selected="false" tabindex="-1">Teboil</button>
+        <button role="tab" id="tab-esg" aria-controls="pr-esg" aria-selected="false" tabindex="-1">ESG Quant Scanner</button>
+      </div>
+
+      <article class="project" id="pr-onvy" role="tabpanel" aria-labelledby="tab-onvy">
+        <p class="meta">2025 — сейчас · CTO, единственный разработчик</p>
+        <p>Сервис для ресторанов. Официант работает смену с петличным микрофоном, а Onvy расшифровывает запись, делит её на подходы к столам и проверяет каждый разговор по стандарту сети. Управляющая видит, где официант не предложил допродажу или пропустил шаг сервиса, и может сразу послушать этот момент.</p>
+        <p>Сейчас идёт пилот в сетевом ресторане в Москве. Проект в акселераторе цифровых продуктов НИЯУ МИФИ.</p>
+        <h3>Что я сделал</h3>
+        <ul class="list">
+          <li>Бэкенд на FastAPI, PostgreSQL и Celery: загрузка записей до 1 ГБ, пайплайн обработки, 34 эндпоинта, 35 таблиц.</li>
+          <li>Отдельную GPU-ноду с распознаванием речи на GigaAM. Своё распознавание выходит в 8–15 раз дешевле облачного.</li>
+          <li>Разделение речи официанта и гостя, хотя микрофон один: по громкости, тембру и проверке через LLM.</li>
+          <li>Проверку ответов модели кодом. Если цитаты нет в расшифровке, замечание не попадает в отчёт.</li>
+          <li>CI на 800+ тестов, Docker, Caddy, WireGuard до GPU-ноды. 152 коммита за четыре недели.</li>
+        </ul>
+        <p class="stackline">Python, FastAPI, PostgreSQL, SQLAlchemy, Celery, Redis, PyTorch, Docker</p>
+        <p class="links"><a href="https://onvy.space" target="_blank" rel="noopener">onvy.space</a></p>
+      </article>
+
+      <article class="project" id="pr-teboil" role="tabpanel" aria-labelledby="tab-teboil" hidden>
+        <p class="meta">2026 · заказ, full-stack</p>
+        <p>Стенд Teboil на благотворительном беговом марафоне. Участник проходит квиз с рулеткой на планшете, волонтёры начисляют баллы за конкурсы с телефона, таблица лидеров идёт на телевизор. Всё работает с ноутбука без интернета.</p>
+        <p>Больше всего времени ушло на скорость. На тестовой базе в 41 000 начислений вкладка с баллами открывалась 1,3 секунды, после индексов и переписанных запросов стала открываться за 3 мс. Ещё перевёл проект с SQLite на PostgreSQL и получил 184 запроса в секунду вместо 80.</p>
+        <p class="stackline">TypeScript, Next.js, PostgreSQL</p>
+      </article>
+
+      <article class="project" id="pr-esg" role="tabpanel" aria-labelledby="tab-esg" hidden>
+        <p class="meta">Свой проект · финансы</p>
+        <p>Скрипт оценивает акции, ETF и ADR по пяти факторам: прибыльность, рост, устойчивость, качество управления и ESG. Всё, что можно посчитать по формуле, считается по данным Yahoo Finance. Остальное, например скандалы вокруг компании, ищет LLM-агент.</p>
+        <p>Из лучших бумаг собирается портфель по Марковицу, потом он проходит 10 000 сценариев Монте-Карло. Если данных не хватило, скрипт так и пишет, а не подставляет ноль.</p>
+        <p class="stackline">Python, NumPy, pandas, SciPy, LLM</p>
+        <p class="links"><a href="https://github.com/FlareAlizer/esg-quant-scanner" target="_blank" rel="noopener">GitHub</a></p>
+      </article>
+    </section>
+
+    <section class="slide" id="case" data-title="Кейс Strauss Group">
+      <p class="meta">Strauss Group · лето 2025</p>
+      <h2 class="h2">Логистика на 30 миллионов</h2>
+      <p class="big">≈30 млн ₽</p>
+      <p class="muted">в год, или 15% бюджета на доставку до дистрибьюторов</p>
+      <p>Я работал системным аналитиком и Python-разработчиком. Сначала собрал в Power BI дашборды по всей логистике и посчитал экономику каждой доставки. На нескольких маршрутах нашлись аномалии, из-за которых компания переплачивала.</p>
+      <p>Дальше мы с логистами разложили их правила на формальные ограничения, и я написал на Python алгоритм, который распределяет грузопотоки. По сути это задача коммивояжёра, только с кучей реальных условий. В итоге расходы на доставку снизились на 15%.</p>
+      <p class="muted">Годом раньше, в первое лето там же, я сделал приложение для учёта оборудования на Power Apps и Dataverse и настроил согласование заявок в Power Automate. До этого оборудование считали вручную.</p>
+    </section>
+
+    <section class="slide" id="experience" data-title="Опыт">
+      <h2 class="h2">Опыт</h2>
+      <ol class="rows">
+        <li><span class="rows__date">2025 — сейчас</span><b>Onvy · CTO, единственный разработчик</b><span>Архитектура, бэкенд, ML-часть с речью, инфраструктура и кабинеты. Пилот в сетевом ресторане, акселератор НИЯУ МИФИ.</span></li>
+        <li><span class="rows__date">Авг. — сент. 2026</span><b>Заказ для Teboil · Full-stack разработчик</b><span>Сайт-игра для стенда Teboil на благотворительном марафоне: квиз, таблица лидеров, панель волонтёров.</span></li>
+        <li><span class="rows__date">Февр. — март 2026</span><b>СтудСтартап · Техлид и наставник</b><span>Вёл 10 команд на федеральном инвестиционном конкурсе: архитектура, выбор стека, роадмапы. Команды защитили проекты перед грантовым фондом.</span></li>
+        <li><span class="rows__date">Июнь — авг. 2025</span><b>Strauss Group · Системный аналитик, Python</b><span>Дашборды по логистике и алгоритм распределения грузов. Около 30 млн ₽ экономии в год.</span></li>
+        <li><span class="rows__date">Янв. — март 2025</span><b>Olmat Business · Преподаватель</b><span>Готовил школьников к олимпиаде по бизнесу, 20 из 30 получили дипломы. Написал два бесплатных учебника по логистике и менеджменту.</span></li>
+        <li><span class="rows__date">Июнь — авг. 2024</span><b>Strauss Group · Разработчик внутренних сервисов</b><span>Учёт оборудования на Power Apps и Dataverse, согласования в Power Automate.</span></li>
+        <li><span class="rows__date">Раньше</span><b>Московская школа программистов</b><span>Два года C++.</span></li>
+      </ol>
+    </section>
+
+    <section class="slide" id="awards" data-title="Награды">
+      <h2 class="h2">Награды и конкурсы</h2>
+      <p class="muted">Кейс-чемпионаты хорошо учат одному: за пару дней сделать то, что потом не стыдно показать жюри.</p>
+      <ol class="rows rows--awards">
+        <li><span class="rows__date">Победа</span><b>Кейс-чемпионат НИУ ВШЭ · суперфинал, 2025</b><span>С Onvy. Я писал бэкенд: FastAPI, PostgreSQL, ffmpeg, саммари разговоров через LLM.</span></li>
+        <li><span class="rows__date">2 место</span><b>«Время Первых», Ростех · трек беспилотных систем</b><span>Среди участников из 40 регионов. Считал экономику и логистику применения дронов.</span></li>
+        <li><span class="rows__date">2 место</span><b>DEADLINE 2025 · трек Мосбиржи</b><span>Игровая механика инвестирования на реальных финансовых инструментах.</span></li>
+        <li><span class="rows__date">3 место</span><b>DEADLINE 2026 · трек Т-Банка</b><span>Отвечал за математику: регрессии и проверку гипотез на значимость.</span></li>
+        <li><span class="rows__date">Финал</span><b>ВСОШ по предпринимательству · 2026</b><span>Финал Всероссийской олимпиады школьников.</span></li>
+        <li><span class="rows__date">Полуфинал</span><b>Премия «Стартех» · 2026</b><span>С Onvy.</span></li>
+        <li><span class="rows__date">Участие</span><b>UPenn × Wharton · инвестиционный конкурс</b><span>Байесовская модель риска для балансировки портфеля и AI-агент для фундаментального анализа компаний.</span></li>
+      </ol>
+    </section>
+
+    <section class="slide" id="stack" data-title="Чем владею">
+      <h2 class="h2">Чем владею</h2>
+      <dl class="skills">
+        <dt>Языки</dt><dd>Python, TypeScript и JavaScript, SQL, C++. Для Power Platform DAX и Power Fx, для этого сайта GLSL. Скрипты на Bash и PowerShell.</dd>
+        <dt>Бэкенд на Python</dt><dd>FastAPI, Flask, asyncio, Pydantic, SQLAlchemy 2, Alembic, Celery, APScheduler, httpx.</dd>
+        <dt>Бэкенд на Node.js</dt><dd>Express, Next.js (Route Handlers), Prisma, node-postgres, zod.</dd>
+        <dt>Базы и очереди</dt><dd>PostgreSQL (индексы, CTE, ON CONFLICT, частичные индексы), SQLite, Redis, asyncpg, миграции через Alembic и Prisma.</dd>
+        <dt>LLM, ML и речь</dt><dd>OpenAI-совместимые API, Claude, DeepSeek, YandexGPT, Gemini: строгие JSON-схемы, запасные провайдеры, кэширование промптов. PyTorch, transformers, GigaAM, WavLM, ffmpeg.</dd>
+        <dt>Данные и математика</dt><dd>pandas, NumPy, SciPy, Power BI. Оптимизация маршрутов, Марковиц, Монте-Карло, регрессии, байесовские модели.</dd>
+        <dt>Инфраструктура и тесты</dt><dd>Docker и Compose, Caddy, nginx, Linux, GitHub Actions, GHCR, WireGuard, Sentry. pytest, Vitest, Supertest, нагрузочные тесты.</dd>
+        <dt>Microsoft Power Platform</dt><dd>Power Apps, Power Automate, Dataverse, Power BI с DAX и Power Query. Могу пройти весь путь: модель данных, приложение, автоматизации и отчёты.</dd>
+        <dt>Боты, фронтенд и прочее</dt><dd>Telegram-боты на aiogram 3, Telegram Login и Bot API, S3. React, Next.js, Vite, Tailwind, TanStack Query, WebGL. Десктоп на PyQt6.</dd>
+      </dl>
+    </section>
+
+    <section class="slide slide--contact" id="contact" data-title="Контакты">
+      <h2 class="h2">Контакты</h2>
+      <p class="lead">Если есть задача, вакансия или идея, пишите. Быстрее всего отвечу в Telegram.</p>
+      <ul class="contacts">
+        <li><span>Telegram</span><a href="https://t.me/FlareAliZZZZe" target="_blank" rel="noopener">@FlareAliZZZZe</a></li>
+        <li><span>Почта</span><a href="mailto:vladfokin32376@gmail.com">vladfokin32376@gmail.com</a></li>
+        <li><span>GitHub</span><a href="https://github.com/FlareAlizer" target="_blank" rel="noopener">FlareAlizer</a></li>
+        <li><span>Телефон</span><a href="tel:+79651901835">+7 965 190-18-35</a></li>
+      </ul>
+      <p class="fine">© 2026 Владислав Фокин. Фон считается прямо в браузере на WebGL: лучи света идут через искривлённое пространство. Это не видео.</p>
+      <button class="lite-off" type="button" hidden>Сейчас включена лёгкая версия. Вернуть полную графику</button>
+    </section>
+  </main>
+
+  <nav class="route" aria-label="Маршрут по разделам">
+    <button class="route__arrow" type="button" data-step="-1" aria-label="Предыдущий раздел">←</button>
+    <ol class="route__dots">
+      <li><a href="#top" data-go aria-label="Главная"><i></i><span>Главная</span></a></li>
+      <li><a href="#about" data-go aria-label="Обо мне"><i></i><span>Обо мне</span></a></li>
+      <li><a href="#projects" data-go aria-label="Проекты"><i></i><span>Проекты</span></a></li>
+      <li><a href="#case" data-go aria-label="Кейс"><i></i><span>Кейс</span></a></li>
+      <li><a href="#experience" data-go aria-label="Опыт"><i></i><span>Опыт</span></a></li>
+      <li><a href="#awards" data-go aria-label="Награды"><i></i><span>Награды</span></a></li>
+      <li><a href="#stack" data-go aria-label="Чем владею"><i></i><span>Чем владею</span></a></li>
+      <li><a href="#contact" data-go aria-label="Контакты"><i></i><span>Контакты</span></a></li>
+    </ol>
+    <button class="route__arrow" type="button" data-step="1" aria-label="Следующий раздел">→</button>
+  </nav>
+
+  <script src="assets/js/space-frag.js?v=5" defer></script>
+  <script src="assets/js/space.js?v=5" defer></script>
+  <script src="assets/js/interact.js?v=5" defer></script>
+  <script src="assets/js/main.js?v=5" defer></script>
+</body>
+</html>
